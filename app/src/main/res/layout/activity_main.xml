@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/weather_wallpaper"
+    tools:context="com.example.kush.weathercast.MainActivity">
+
+
+
+<com.google.android.gms.maps.MapView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></com.google.android.gms.maps.MapView>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/icon"
+        android:src="@drawable/cloudicon"
+        android:layout_marginLeft="85dp"
+        android:contentDescription="@string/weather_icon"
+        />
+    <TextView
+        android:textColor="@color/textWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/icon"
+        android:layout_marginLeft="120dp"
+        android:text="@string/cloudy"
+        android:textSize="30sp"
+        android:id="@+id/summary"/>
+
+    <TextView
+        android:textColor="@color/textWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_temp"
+        android:textSize="60sp"
+        android:id="@+id/max_temp"/>
+    <TextView
+        android:textColor="@color/textWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min_temp"
+        android:textSize="60sp"
+        android:layout_marginLeft="260dp"
+        android:id="@+id/min_temp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hourly_recycler_view"
+        android:layout_below="@id/summary"
+        android:layout_marginTop="50dp">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
